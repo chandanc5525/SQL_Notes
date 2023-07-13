@@ -1,0 +1,20 @@
+-- Lecture 01 
+-- ---------------------------------------------------------
+# Create DataBase
+CREATE DATABASE DB ;
+# Use DataBase
+USE db;
+# Show DataBase
+SHOW databases;
+# Create Table Cat
+CREATE TABLE cat(
+name varchar(20),
+age int
+);
+# Checking Table Cat
+SELECT * from Cat;
+# Checking More Information About the Table : Cat
+SHOW COLUMNS from Cat;
+## We can also use DESC function 
+DESC Cat;
+-- ---------------------------------------------------------
