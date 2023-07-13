@@ -1,0 +1,47 @@
+-- Lecture 02 
+-- ---------------------------------------------------------
+# Inserting values into Tables
+INSERT INTO Cat values ('Mini', 5);  # 1st approach
+INSERT INTO Cat (name,age) values ('Rinnie',3);  # 2nd approach
+
+# Checking Entered Values :
+SELECT * From Cat;
+
+# Checking Description of table Cat :
+DESC Cat;
+
+# Multiple Inserting Values in Table 
+INSERT INTO Cat values ('Tinnie', 2),('Ginne',7);
+SELECT * From Cat;
+
+# Use of NOT NULL -- Adding Constarint 
+-- Use of NOT NULL Command, Not allowing us to enter Null Values in the table.
+
+CREATE TABLE Cat2(
+name varchar(50) NOT NULL,
+age int NOT NULL );
+
+INSERT INTO Cat2 values('Minie', 1);
+INSERT INTO Cat2 values('Mitie', 6);
+SELECT * FROM Cat2;
+DESC Cat2;
+
+# Using Primary Key Constraint
+CREATE TABLE unique_cats (
+	cat_id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+);
+
+-- Another option:
+
+CREATE TABLE unique_cats2 (
+	cat_id INT,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    PRIMARY KEY (cat_id)
+);
+
+
+
+-- ---------------------------------------------------------
